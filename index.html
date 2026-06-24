@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>Centro de Desarrollo Comunitario | Guillermo Orozco</title>
+  <!-- Estilos CSS (separado) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- ====== HOJA PRINCIPAL ====== -->
+  <main id="main-page" class="page active">
+    <!-- Logos superiores -->
+    <div class="logos-bar">
+      <img src="imagenes/logo cdc 2.png" alt="Logo 1" class="logo-img" onerror="this.style.display='none'">
+      <img src="imagenes/logo cdc 3.png" alt="Logo 2" class="logo-img" onerror="this.style.display='none'">
+      <img src="imagenes/logocdc43.png" alt="Logo 3" class="logo-img" onerror="this.style.display='none'">
+      <img src="imagenes/logo verde cdc.png" alt="Logo 3" class="logo-img" onerror="this.style.display='none'">
+      <img src="imagenes/logofer.jpeg" alt="Logo 3" class="logo-img" onerror="this.style.display='none'">      
+    </div>
+
+    <!-- Título principal -->
+    <h1 class="main-title">Centro de Desarrollo Comunitario <span>|Guillermo Orozco|</span></h1>
+
+    <!-- Botones de actividades (9) -->
+    <div class="activities-grid">
+      <button class="activity-btn" data-activity="pole">pole dance</button>
+      <button class="activity-btn" data-activity="lucha">lucha libre</button>
+      <button class="activity-btn" data-activity="fenix">fenix dancer</button>
+      <button class="activity-btn" data-activity="becerros">voleibol Becerros</button>
+      <button class="activity-btn" data-activity="tsunami">voleibol tsunami</button>
+      <button class="activity-btn" data-activity="boxing">boxing</button>
+      <button class="activity-btn" data-activity="gimnasia">gimnasia rítmica</button>
+      <button class="activity-btn" data-activity="yoga">yoga</button>
+      <button class="activity-btn" data-activity="basquet">basquetbol</button>
+      <button class="activity-btn" data-activity="juridico">juridico</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <a href="https://jaid227.github.io/EntropiaDigital/" target="_blank" rel="noopener">
+        © 2026 Mandrágora Entrópica | Desarrollo Web Estratégico
+      </a>
+    </footer>
+  </main>
+
+  <!-- ====== HOJAS DE ACTIVIDAD (plantilla) ====== -->
+  <!-- Cada actividad se genera dinámicamente con JS, pero aquí está el contenedor -->
+  <div id="activity-pages-container"></div>
+
+  <!-- Botón de modo oscuro/claro (flotante) -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- JavaScript (separado) -->
+  <script src="script.js"></script>
+</body>
+</html>
