@@ -5,14 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const activitiesData = {
     pole: {
       nombre: 'Pole Dance',
-      instructor: 'Kari',
+      instructor: 'Maestra Kari',
       genero: 'femenino', // 'femenino' o 'masculino'
       frase: 'Entrena de manera diferente y divertida. Tonifica, mejora flexibilidad, mejora la salud física y mental, reduce el estrés',
       imagen: '',
       video: 'videos/pole.mp4',
       facebook: 'https://www.facebook.com/profile.php?id=61563787855951',
-      tiktok: 'https://tiktok.com/@poledance',
-      instagram: 'https://instagram.com/poledance',
       whatsapp: 'https://wa.me/5539030758'
     },
     lucha: {
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'videos/lucha.mp4',
       facebook: 'https://www.facebook.com/juan.gasca.barrientos.2025',
       tiktok: 'https://www.tiktok.com/@juan.gasca.barrie',
-      instagram: 'https://instagram.com/luchalibre',
       whatsapp: 'https://wa.me/5563599452'
     },
     fenix: {
@@ -36,19 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'videos/fenix.mp4',
       facebook: 'https://www.facebook.com/cesaruriel.reyessanchez',
       tiktok: 'https://www.tiktok.com/@_academiafenix',
-      instagram: 'https://instagram.com/fenixdancer',
       whatsapp: 'https://wa.me/5561862281'
     },
     becerros: {
       nombre: 'Voleibol Becerros',
-      instructor: 'Cecilio Becerra Rodriguez',
+      instructor: 'Maestro Cecilio Becerra Rodriguez',
       genero: 'masculino',
       frase: 'Juego en equipo, garra y altura.',
       imagen: 'imagenes/becerros.jpg',
       video: 'videos/becerros.mp4',
-      facebook: 'https://facebook.com/becerros',
-      tiktok: 'https://tiktok.com/@becerros',
-      instagram: 'https://instagram.com/becerros',
       whatsapp: 'https://wa.me/5546463600'
     },
     tsunami: {
@@ -58,14 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
       frase: 'Oleada de potencia y precisión.',
       imagen: 'imagenes/tsunami.jpg',
       video: 'videos/tsunami.mp4',
-      facebook: 'https://facebook.com/tsunami',
-      tiktok: 'https://tiktok.com/@tsunami',
-      instagram: 'https://instagram.com/tsunami',
       whatsapp: 'https://wa.me/5516873019'
     },
     boxing: {
       nombre: 'Boxing',
-      instructor: 'Ivan',
+      instructor: 'Maestro Ivan',
       genero: 'masculino',
       frase: 'Foco, resistencia y espíritu de campeón.',
       imagen: '',
@@ -82,33 +72,25 @@ document.addEventListener('DOMContentLoaded', () => {
       frase: 'Armonía, flexibilidad y arte en movimiento.',
       imagen: 'imagenes/gimnasia.jpg',
       video: 'videos/gimnasia.mp4',
-      facebook: 'https://facebook.com/gimnasia',
-      tiktok: 'https://tiktok.com/@gimnasia',
-      instagram: 'https://instagram.com/gimnasia',
       whatsapp: 'https://wa.me/5518376153'
     },
     yoga: {
       nombre: 'Yoga',
-      instructor: 'Gina Barrera',
+      instructor: 'Maestra Gina Barrera',
       genero: 'femenino',
       frase: 'Equilibrio, respiración y bienestar.',
       imagen: 'imagenes/yoga.jpg',
       video: 'videos/yoga.mp4',
-      facebook: 'https://facebook.com/yoga',
-      tiktok: 'https://tiktok.com/@yoga',
-      instagram: 'https://instagram.com/yoga',
       whatsapp: 'https://wa.me/5610078487'
     },
     basquet: {
       nombre: 'Basquetbol',
-      instructor: 'Alexa Cruz',
+      instructor: 'Maestra Alexa Cruz',
       genero: 'femenino',
       frase: 'Drible, pase y enceste con pasión.',
       imagen: 'imagenes/basquet.jpg',
       video: 'videos/basquet.mp4',
       facebook: 'https://www.facebook.com/profile.php?id=61560836120790',
-      tiktok: 'https://tiktok.com/@basquet',
-      instagram: 'https://instagram.com/basquet',
       whatsapp: 'https://wa.me/5584465709'
     },
     juridico: {
@@ -119,10 +101,27 @@ document.addEventListener('DOMContentLoaded', () => {
       imagen: 'imagenes/basquet.jpg',
       video: 'videos/basquet.mp4',
       facebook: 'https://www.facebook.com/profile.php?id=61573311537762&rdid=BWgELWISZOgZtnO9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19F86VmkfS%2F#',
-      tiktok: 'https://tiktok.com/@basquet',
-      instagram: 'https://instagram.com/basquet',
+      tiktok: 'https://www.tiktok.com/@villegasfirmalegal',
       whatsapp: 'https://wa.me/5533322426'
-    }    
+    },
+    Persona: {
+      nombre: 'Persona adulta mayor',
+      instructor: 'Maestra Aidé',
+      genero: 'femenino',
+      frase: '',
+      imagen: 'imagenes/basquet.jpg',
+      video: 'videos/basquet.mp4',
+      whatsapp: 'https://wa.me/5613529628'
+    },
+    Psicologia: {
+      nombre: 'Psicología',
+      instructor: '',
+      genero: 'femenino',
+      frase: '',
+      imagen: 'imagenes/basquet.jpg',
+      video: 'videos/basquet.mp4',
+      whatsapp: 'https://wa.me/5587818516'
+    }            
   };
 
   // ---- Referencias ----
@@ -139,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Determinar título del instructor (maestro/maestra)
     const genero = data.genero || 'femenino';
-    const instructorLabel = genero === 'femenino' ? 'Maestra' : 'Maestro';
+    const instructorLabel = genero === 'femenino' ? '' : '';
 
     // Botón regresar
     const backBtn = document.createElement('button');
@@ -164,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     phrase.className = 'phrase-box';
     phrase.innerHTML = `<i class="fas fa-quote-left" style="margin-right:0.5rem;opacity:0.6;"></i> ${data.frase}`;
 
+   
     // Media (imagen + video)
     const mediaGrid = document.createElement('div');
     mediaGrid.className = 'media-grid';
