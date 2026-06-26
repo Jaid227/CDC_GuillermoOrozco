@@ -90,7 +90,7 @@ body.dark-mode .page {
   text-align: center;
   line-height: 1.2;
   margin: 0.5rem 0 1.8rem 0;
-  text-transform: lowercase;
+  /*text-transform: lowercase;*/
   color: #1e1e1e;
 }
 
@@ -203,7 +203,7 @@ body.dark-mode .back-btn:hover {
   font-size: 2.4rem;
   font-weight: 300;
   margin-bottom: 0.25rem;
-  text-transform: lowercase;
+  /*text-transform: lowercase;*/
 }
 
 .instructor-name {
@@ -358,4 +358,42 @@ body.dark-mode .theme-toggle {
   .logo-img {
     height: 35px;
   }
+}
+
+
+/* En style.css - modifica las clases existentes */
+
+/* Para los títulos de actividades */
+.activity-title {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+  text-transform: capitalize; /* Cambia a: uppercase, lowercase, capitalize, none */
+}
+
+/* Para los nombres de instructores */
+.instructor-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize; /* Cambia según necesites */
+}
+
+/* Para los botones de actividades */
+.activity-btn {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(200, 190, 180, 0.3);
+  border-radius: 3rem;
+  padding: 0.9rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e1e1e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize; /* Cambia según necesites */
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.02);
 }
