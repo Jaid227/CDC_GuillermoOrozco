@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
       tiktok: 'https://www.tiktok.com/@_academiafenix',
       whatsapp: 'https://wa.me/5561862281'
     },
+    Danza: {
+      nombre: 'Danza Aérea',
+      instructor: 'Sonia Moran',
+      genero: 'femenino',
+      frase: 'Bailar es poesía con piernas y brazos',
+      imagen: '',
+      video: '',
+      whatsapp: 'https://wa.me/5532625559'
+    },
     becerros: {
       nombre: 'Voleibol Becerros',
       instructor: 'Maestro Cecilio Becerra Rodriguez',
