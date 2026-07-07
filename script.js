@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     Danza: {
       nombre: 'Danza Aérea',
-      instructor: 'Sonia Moran',
+      instructor: 'Maestra Sonia Moran',
       genero: 'femenino',
       frase: 'Bailar es poesía con piernas y brazos',
       imagen: '',
