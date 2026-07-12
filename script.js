@@ -122,6 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
       video: 'videos/basquet.mp4',
       whatsapp: 'https://wa.me/5613529628'
     },
+    Fisioterapia: {
+      nombre: 'Fisioterapias alternativas',
+      instructor: 'Fisioterapeuta Jaid Lozano',
+      genero: 'Masculino',
+      frase: '',
+      imagen: '',
+      video: '',
+      whatsapp: 'https://jaid227.github.io/Fisioterapias.JaidLozano/'
+    },
     Psicologia: {
       nombre: 'Psicología',
       instructor: '',
@@ -132,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       whatsapp: 'https://wa.me/5587818516'
     }            
   };
+  
 
   // ---- Referencias ----
   const mainPage = document.getElementById('main-page');
