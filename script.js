@@ -128,8 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       genero: 'Masculino',
       frase: 'Terapias alternativas con enfoque comunitarío',
       imagen: '',
-      video: '',
-      whatsapp: '5591451227',
+      video: '',    
       enlacePersonalizado: 'https://jaid227.github.io/Fisioterapias.JaidLozano/',
     },
     Psicologia: {
