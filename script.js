@@ -126,10 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nombre: 'Fisioterapias alternativas',
       instructor: 'Fisioterapeuta Jaid Lozano',
       genero: 'Masculino',
-      frase: '',
+      frase: 'Terapias alternativas con enfoque comunitarío',
       imagen: '',
-      video: '',
-      whatsapp: 'https://jaid227.github.io/Fisioterapias.JaidLozano/'
+      video: 'https://jaid227.github.io/Fisioterapias.JaidLozano/',
+      whatsapp: ''
     },
     Psicologia: {
       nombre: 'Psicología',
