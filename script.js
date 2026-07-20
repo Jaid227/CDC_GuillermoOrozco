@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nombre: 'Danza Aérea',
       instructor: 'Maestra Sonia Moran',
       genero: 'femenino',
-      frase: 'Bailar es poesía con piernas y brazos',
+      frase: 'de Lunes a Viernes de 8 a 9:30PM. los Lunes son gratis para que tomes tu clase muestra',
       imagen: '',
       video: '',
       whatsapp: 'https://wa.me/5532625559'
