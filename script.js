@@ -128,8 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
       genero: 'Masculino',
       frase: 'Terapias alternativas con enfoque comunitarío',
       imagen: '',
-      video: 'https://jaid227.github.io/Fisioterapias.JaidLozano/',
-      whatsapp: ''
+      video: '',
+      whatsapp: '5591451227',
+      enlacePersonalizado: 'https://jaid227.github.io/Fisioterapias.JaidLozano/',
     },
     Psicologia: {
       nombre: 'Psicología',
@@ -220,7 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
       { icon: 'fab fa-facebook', url: data.facebook, label: 'Facebook' },
       { icon: 'fab fa-tiktok', url: data.tiktok, label: 'TikTok' },
       { icon: 'fab fa-instagram', url: data.instagram, label: 'Instagram' },
-      { icon: 'fab fa-whatsapp', url: data.whatsapp, label: 'WhatsApp' }
+      { icon: 'fab fa-whatsapp', url: data.whatsapp, label: 'WhatsApp' },
+      { icon: 'fas fa-link', url: data.enlacePersonalizado, label: 'Más información' }
     ];
 
     socialData.forEach(s => {
