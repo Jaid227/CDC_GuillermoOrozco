@@ -1,7 +1,18 @@
-// ===== script.js =====
-document.addEventListener('DOMContentLoaded', () => {
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Conoce las actividades deportivas, artísticas y servicios del Centro de Desarrollo Comunitario Guillermo Orozco."><meta name="theme-color" content="#143e2d"><title>CDC Guillermo Orozco · Comunidad en movimiento</title>
+<style>
+:root{--bg:#f5f6ef;--panel:#fff;--ink:#183c2d;--muted:#607168;--line:#dbe3d7;--green:#215f42;--lime:#dded9e;--soft:#eaf0e4;--shadow:0 20px 60px #173d2b0c}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,'Segoe UI',sans-serif;line-height:1.6}body.dark{--bg:#101e18;--panel:#192b22;--ink:#edf4e8;--muted:#b0c1b4;--line:#34483c;--green:#a8d99c;--soft:#24392c;--shadow:0 20px 60px #0002}a{color:inherit}button,input{font:inherit}button,a,input{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #8dbb4c;outline-offset:5px}.wrap{width:min(1200px,calc(100% - 64px));margin:auto}.skip{position:absolute;top:-100px;background:var(--panel);padding:12px;z-index:100}.skip:focus{top:10px}header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}.nav{min-height:84px;display:flex;align-items:center;gap:32px}.brand{display:flex;align-items:center;gap:12px;margin-right:auto}.mark{height:45px;width:45px;display:grid;place-items:center;background:var(--ink);color:var(--bg);border-radius:50%;font-size:12px;font-weight:900}.brand strong{display:block;font-size:15px;line-height:1.3}.brand small{font-size:11px;color:var(--muted);letter-spacing:1px}.nav-link{font-size:13px;font-weight:600}.theme{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:50%;width:40px;height:40px}.hero{margin-top:32px;display:grid;grid-template-columns:1.05fr 1fr;min-height:570px;border-radius:24px;overflow:hidden;background:#153e2d;color:#fff}.hero-copy{padding:58px 48px;position:relative}.eyebrow{text-transform:uppercase;font-size:11px;font-weight:750;letter-spacing:2px;display:flex;gap:10px;align-items:center}.dot{width:7px;height:7px;background:#d9ec9b;border-radius:50%;display:inline-block}h1{font-size:clamp(42px,4.7vw,67px);line-height:1.05;letter-spacing:-3px;font-weight:550;margin:28px 0 24px}h1 em{font-family:Georgia,serif;color:#d9ec9b;font-weight:400} .hero-copy p{color:#d0ded2;max-width:390px;font-size:15px}.cta{display:inline-flex;gap:28px;align-items:center;background:var(--lime);color:#173d2d;padding:14px 21px;border-radius:8px;font-size:13px;font-weight:750;margin-top:22px}.hero-image{position:relative;background:#294e37;min-height:340px}.hero-image>img{width:100%;height:100%;position:absolute;object-fit:cover}.hero-image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0a291dd9,transparent 70%)}.photo-caption{position:absolute;bottom:32px;left:32px;right:32px;z-index:1;border-top:1px solid #ffffff60;padding-top:16px;font-size:13px;display:flex;justify-content:space-between;gap:20px}.photo-caption strong{font-size:22px;display:block}.hero-fallback{position:absolute;inset:0;display:grid;place-content:center;padding:40px;font:italic 48px/1.2 Georgia;color:#d9ec9b;background:radial-gradient(ellipse at top right,#77a76855,transparent 60%)}.logos{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;padding:32px 16px;border-bottom:1px solid var(--line)}.logos img{height:60px;width:auto;max-width:150px;object-fit:contain;background:#fff;padding:5px;border-radius:5px}.section{padding:70px 0}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}.kicker{color:var(--green);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}h2{font-size:clamp(30px,3vw,42px);line-height:1.15;letter-spacing:-1.4px;margin:14px 0 20px;font-weight:550}.about p{margin:0 0 16px;color:var(--muted);font-size:15px}.values{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.values span{border:1px solid var(--line);padding:7px 12px;border-radius:30px;font-size:12px}.catalog{border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.section-head p{color:var(--muted);max-width:340px;font-size:14px}.tools{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin:30px 0}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);padding:9px 16px;border-radius:30px;font-size:12px}.filter[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}.search{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;padding:9px 14px;background:var(--panel);gap:10px}.search input{border:0;outline:none;background:transparent;color:var(--ink);width:200px;font-size:13px}.count{color:var(--muted);font-size:12px;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-5px);border-color:#739364}.card-art{height:190px;position:relative;background:var(--soft);overflow:hidden;display:flex;align-items:center;justify-content:center}.card-art img{height:100%;width:100%;object-fit:cover;transition:transform .4s}.card:hover img{transform:scale(1.04)}.art-symbol{font-size:80px;font-family:Georgia,serif;color:var(--green);opacity:.35;line-height:1}.category-tag{position:absolute;left:16px;top:16px;font-size:10px;background:var(--panel);padding:5px 10px;border-radius:30px;color:var(--ink);letter-spacing:.5px}.card-body{padding:23px}.card h3{font-size:20px;margin:0 0 6px;letter-spacing:-.5px}.instructor{font-size:12px;color:var(--muted);min-height:20px}.card-link{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:15px;border-top:1px solid var(--line);font-size:12px;font-weight:700;color:var(--green)}.empty{padding:40px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.contact-banner{margin:0 0 60px;background:var(--soft);padding:36px 42px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:30px}.contact-banner h2{font-size:27px;margin:0 0 8px}.contact-banner p{font-size:14px;color:var(--muted);margin:0}.round-arrow{font-size:36px}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:11px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.detail{padding:32px 0 70px}.back{display:inline-block;font-size:13px;margin:0 0 30px;color:var(--muted)}.detail-hero{border-radius:20px;background:#153e2d;color:#fff;padding:48px}.detail-hero h1{font-size:clamp(36px,5vw,60px);margin:20px 0}.detail-hero .kicker{color:#dded9e}.detail-hero p{color:#d2e0d5}.detail-layout{display:grid;grid-template-columns:1fr 320px;gap:26px;margin-top:26px}.info-panel{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px;align-self:start}.info-panel h2{font-size:22px;letter-spacing:-.6px;margin-top:0}.info-panel p{font-size:13px;color:var(--muted)}.social{display:flex;align-items:center;justify-content:space-between;padding:12px 15px;border:1px solid var(--line);margin-top:10px;border-radius:8px;font-size:13px}.social.primary{background:var(--ink);color:var(--bg)}.media{display:grid;gap:20px;align-content:start}.media figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.media img{width:100%;max-height:650px;object-fit:contain;display:block}.media video{width:100%;max-height:550px;display:block;background:#10251b}.media figcaption{font-size:12px;color:var(--muted);padding:12px 18px}.media-message{padding:30px;color:var(--muted);font-size:13px}.detail-note{margin-top:22px;border-left:3px solid #adc87f;padding:16px 20px;background:var(--soft);border-radius:0 8px 8px 0}.detail-note p{margin:0;font-size:14px}.noscript{padding:25px} [hidden]{display:none!important}@media(max-width:900px){.hero-copy{padding:40px 30px}h1{letter-spacing:-2px}.about{gap:35px}.grid{grid-template-columns:repeat(2,1fr)}.detail-layout{grid-template-columns:1fr 280px}.nav{gap:18px}}@media(max-width:640px){.wrap{width:calc(100% - 32px)}.nav{min-height:72px;gap:12px}.brand strong{font-size:12px}.brand small{font-size:9px}.mark{width:36px;height:36px;font-size:10px}.nav-link{font-size:11px}.nav-about{display:none}.hero{grid-template-columns:1fr;margin-top:16px}.hero-copy{padding:36px 26px}h1{font-size:47px}.hero-image{min-height:260px}.logos{gap:20px}.logos img{height:44px;max-width:100px}.about{grid-template-columns:1fr;gap:10px}.section{padding:44px 0}.section-head{display:block}.tools{gap:16px}.search,.search input{width:100%}.grid{grid-template-columns:1fr}.card-art{height:210px}.contact-banner{padding:26px;margin-bottom:40px}.contact-banner h2{font-size:23px}.detail-hero{padding:30px 24px}.detail-layout{grid-template-columns:1fr}.info-panel{order:-1}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-  // ---- Datos de actividades (editables) ----
+/* Identidad institucional al inicio y fotografía de fondo general. */
+body{isolation:isolate;background:var(--bg);min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:url('imagenes/fondocdc.jpeg') center / cover no-repeat;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:rgba(245,246,239,.87);pointer-events:none}
+body.dark::after{background:rgba(16,30,24,.9)}
+.logos{margin:24px auto 0;padding:22px 28px;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);gap:36px}
+.logos img{height:66px;max-width:160px;padding:7px}
+.hero{margin-top:24px}
+@media(max-width:640px){.logos{margin-top:16px;padding:18px 12px;gap:16px}.logos img{height:48px;max-width:100px;padding:4px}.hero{margin-top:16px}}
+</style></head><body><a class="skip" href="#content">Saltar al contenido</a><header><nav class="wrap nav" aria-label="Navegación principal"><a class="brand" href="#inicio"><span class="mark">CDC</span><span><strong>Guillermo Orozco</strong><small>DESARROLLO COMUNITARIO</small></span></a><a class="nav-link nav-about" href="#nosotros">El centro</a><a class="nav-link" href="#actividades">Actividades ↗</a><button class="theme" id="theme" aria-label="Activar modo oscuro">◐</button></nav></header><div class="wrap logos" aria-label="Identidad del centro"><img src="imagenes/logo cdc 2.png" alt="Identidad del CDC, logotipo 1"><img src="imagenes/logo cdc 3.png" alt="Identidad del CDC, logotipo 2"><img src="imagenes/logocdc43.png" alt="Identidad del CDC, logotipo 3"><img src="imagenes/logo verde cdc.png" alt="Identidad del CDC, logotipo verde"><img src="imagenes/logofer.jpeg" alt="Identidad del CDC, logotipo 5"></div><main id="content" tabindex="-1"><div id="home"><div class="wrap"><section class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span> Centro de Desarrollo Comunitario</div><h1>Un espacio para<br><em>crecer juntos.</em></h1><p>Deporte, expresión y bienestar. Descubre las actividades y servicios del CDC Guillermo Orozco y encuentra tu próxima experiencia.</p><a class="cta" href="#actividades">Explorar actividades <span>↗</span></a></div><div class="hero-image"><div class="hero-fallback" aria-hidden="true">Comunidad<br>en movimiento.</div><img src="imagenes/fondocdc.jpeg" alt="Centro de Desarrollo Comunitario Guillermo Orozco" onerror="this.hidden=true"><div class="photo-caption"><span><strong>Guillermo Orozco</strong>Tu comunidad. Tu espacio.</span><span>DEPORTE<br>Y BIENESTAR</span></div></div></section><section class="section about" id="nosotros"><div><span class="kicker">Un lugar de encuentro</span><h2>¿Qué es un CDC?</h2></div><div><p>Un <strong>Centro de Desarrollo Comunitario (CDC)</strong> es un espacio de encuentro que promueve el desarrollo de las personas y fortalece los vínculos de la comunidad mediante actividades, aprendizaje y servicios.</p><p>En el <strong>CDC Guillermo Orozco</strong> puedes conocer distintas opciones deportivas y artísticas, así como servicios de orientación y bienestar. Cada actividad abre una oportunidad para desarrollar habilidades, convivir y formar parte de una comunidad.</p><div class="values"><span>Movimiento y deporte</span><span>Arte y expresión</span><span>Bienestar y comunidad</span></div></div></section><section class="section catalog" id="actividades"><div class="section-head"><div><span class="kicker">Encuentra tu espacio</span><h2>Actividades y servicios</h2></div><p>Conoce cada propuesta y contacta directamente a sus responsables para solicitar información.</p></div><div class="tools"><div class="filters" role="group" aria-label="Filtrar actividades"><button class="filter" data-filter="Todas" aria-pressed="true">Todas</button><button class="filter" data-filter="Deporte" aria-pressed="false">Deporte</button><button class="filter" data-filter="Arte y movimiento" aria-pressed="false">Arte y movimiento</button><button class="filter" data-filter="Bienestar y servicios" aria-pressed="false">Bienestar y servicios</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar una actividad…" aria-label="Buscar actividad o responsable"></label></div><p class="count" id="count" role="status"></p><div class="grid" id="grid"></div><p class="empty" id="empty" hidden>No encontramos coincidencias. Prueba con otro nombre o selecciona «Todas».</p></section><a class="contact-banner" href="#actividades"><div><h2>Tu próxima actividad comienza aquí.</h2><p>Explora las opciones y consulta horarios, costos y requisitos con cada responsable.</p></div><span class="round-arrow" aria-hidden="true">↗</span></a></div></div><article class="wrap detail" id="detail" hidden></article></main><footer><div class="wrap footer-row"><span>CDC Guillermo Orozco · Centro de Desarrollo Comunitario</span><a href="https://jaid227.github.io/EntropiaDigital/" target="_blank" rel="noopener noreferrer">© 2026 Mandrágora Entrópica | Desarrollo Web Estratégico ↗</a></div></footer><noscript><p class="noscript">Activa JavaScript para consultar las fichas y los contactos de las actividades.</p></noscript><script>
   const activitiesData = {
     pole: {
       nombre: 'Pole Dance',
@@ -143,147 +154,16 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
 
-  // ---- Referencias ----
-  const mainPage = document.getElementById('main-page');
-  const container = document.getElementById('activity-pages-container');
-  const themeToggle = document.getElementById('theme-toggle');
-  const body = document.body;
 
-  // ---- Función para crear la página de actividad ----
-  function createActivityPage(activityId, data) {
-    const page = document.createElement('div');
-    page.className = 'page activity-detail';
-    page.id = `activity-${activityId}`;
-
-    // Determinar título del instructor (maestro/maestra)
-    const genero = data.genero || 'femenino';
-    const instructorLabel = genero === 'femenino' ? '' : '';
-
-    // Botón regresar
-    const backBtn = document.createElement('button');
-    backBtn.className = 'back-btn';
-    backBtn.innerHTML = '<i class="fas fa-arrow-left"></i> Regresar';
-    backBtn.addEventListener('click', () => {
-      showPage('main-page');
-    });
-
-    // Título actividad
-    const title = document.createElement('h2');
-    title.className = 'activity-title';
-    title.textContent = data.nombre;
-
-    // Instructor
-    const instructor = document.createElement('p');
-    instructor.className = 'instructor-name';
-    instructor.innerHTML = `<i class="fas fa-chalkboard-teacher"></i> ${instructorLabel} ${data.instructor}`;
-
-    // Frase
-    const phrase = document.createElement('div');
-    phrase.className = 'phrase-box';
-    phrase.innerHTML = `<i class="fas fa-quote-left" style="margin-right:0.5rem;opacity:0.6;"></i> ${data.frase}`;
-
-   
-    // Media (imagen + video)
-    const mediaGrid = document.createElement('div');
-    mediaGrid.className = 'media-grid';
-
-    if (data.imagen) {
-      const imgDiv = document.createElement('div');
-      imgDiv.className = 'media-item';
-      const img = document.createElement('img');
-      img.src = data.imagen;
-      img.alt = data.nombre;
-      img.loading = 'lazy';
-      img.onerror = () => { img.style.display = 'none'; };
-      imgDiv.appendChild(img);
-      mediaGrid.appendChild(imgDiv);
-    }
-
-    if (data.video) {
-      const vidDiv = document.createElement('div');
-      vidDiv.className = 'media-item';
-      const video = document.createElement('video');
-      video.src = data.video;
-      video.controls = true;
-      video.preload = 'metadata';
-      video.playsInline = true;
-      video.onerror = () => { video.style.display = 'none'; };
-      vidDiv.appendChild(video);
-      mediaGrid.appendChild(vidDiv);
-    }
-
-    // Botones sociales
-    const socials = document.createElement('div');
-    socials.className = 'social-links';
-
-    const socialData = [
-      { icon: 'fab fa-facebook', url: data.facebook, label: 'Facebook' },
-      { icon: 'fab fa-tiktok', url: data.tiktok, label: 'TikTok' },
-      { icon: 'fab fa-instagram', url: data.instagram, label: 'Instagram' },
-      { icon: 'fab fa-whatsapp', url: data.whatsapp, label: 'WhatsApp' },
-      { icon: 'fas fa-link', url: data.enlacePersonalizado, label: 'Más información' }
-    ];
-
-    socialData.forEach(s => {
-      if (s.url) {
-        const a = document.createElement('a');
-        a.className = 'social-btn';
-        a.href = s.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.innerHTML = `<i class="${s.icon}"></i> ${s.label}`;
-        socials.appendChild(a);
-      }
-    });
-
-    // Footer (opcional, se hereda el global)
-    // Ensamblar
-    page.appendChild(backBtn);
-    page.appendChild(title);
-    page.appendChild(instructor);
-    page.appendChild(phrase);
-    page.appendChild(mediaGrid);
-    page.appendChild(socials);
-
-    return page;
-  }
-
-  // ---- Generar todas las páginas de actividad ----
-  Object.keys(activitiesData).forEach(key => {
-    const data = activitiesData[key];
-    const pageEl = createActivityPage(key, data);
-    container.appendChild(pageEl);
-  });
-
-  // ---- Función para mostrar página ----
-  function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    const target = document.getElementById(pageId);
-    if (target) target.classList.add('active');
-    // Scroll arriba
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ---- Eventos de los botones de actividad ----
-  document.querySelectorAll('.activity-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const actId = btn.dataset.activity;
-      const pageId = `activity-${actId}`;
-      showPage(pageId);
-    });
-  });
-
-  // ---- Tema oscuro/claro ----
-  let darkMode = false;
-  themeToggle.addEventListener('click', () => {
-    darkMode = !darkMode;
-    body.classList.toggle('dark-mode', darkMode);
-    themeToggle.innerHTML = darkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-  });
-
-  // ---- Inicio: mostrar principal ----
-  showPage('main-page');
-
-  // ---- (Opcional) Si no hay imágenes, no romper ----
-  console.log('Centro de Desarrollo Comunitario | Guillermo Orozco');
-});
+const groups={pole:'Arte y movimiento',lucha:'Deporte',fenix:'Arte y movimiento',becerros:'Deporte',tsunami:'Deporte',boxing:'Deporte',gimnasia:'Arte y movimiento',yoga:'Bienestar y servicios',basquet:'Deporte',juridico:'Bienestar y servicios',Persona:'Bienestar y servicios',Psicologia:'Bienestar y servicios',Danza:'Arte y movimiento',Fisioterapia:'Bienestar y servicios'};
+const symbols={pole:'✧',lucha:'◈',fenix:'✴',becerros:'◉',tsunami:'≋',boxing:'◇',gimnasia:'∞',yoga:'◎',basquet:'◉',juridico:'§',Persona:'✳',Psicologia:'◌',Danza:'✧',Fisioterapia:'⌁'};
+const order=['pole','lucha','fenix','becerros','tsunami','boxing','gimnasia','yoga','basquet','juridico','Persona','Psicologia','Danza','Fisioterapia'];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const name=d=>d.nombre==='juridico'?'Jurídico':d.nombre;
+let filter='Todas';const search=document.getElementById('search');const grid=document.getElementById('grid');
+function render(){const q=search.value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const ids=order.filter(id=>{const d=activitiesData[id];return (filter==='Todas'||groups[id]===filter)&&(d.nombre+' '+d.instructor).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(q)});grid.innerHTML=ids.map(id=>{const d=activitiesData[id];return `<a class="card" href="#actividad/${id}" aria-label="Conocer ${esc(name(d))}"><div class="card-art"><span class="art-symbol" aria-hidden="true">${symbols[id]}</span>${d.imagen?`<img style="position:absolute;inset:0" src="${esc(d.imagen)}" alt="${esc(name(d))}" loading="lazy" onerror="this.hidden=true">`:''}<span class="category-tag">${groups[id]}</span></div><div class="card-body"><h3>${esc(name(d))}</h3><div class="instructor">${esc(d.instructor||'Conoce esta actividad')}</div><span class="card-link">Ver actividad <span aria-hidden="true">↗</span></span></div></a>`}).join('');document.getElementById('count').textContent=`${ids.length} de ${order.length} actividades y servicios`;document.getElementById('empty').hidden=!!ids.length}
+search.addEventListener('input',render);document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render()}));
+const detail=document.getElementById('detail');const home=document.getElementById('home');
+function route(){document.querySelectorAll('video').forEach(v=>v.pause());const id=decodeURIComponent(location.hash.replace('#actividad/',''));const d=location.hash.startsWith('#actividad/')?activitiesData[id]:null;if(!d){home.hidden=false;detail.hidden=true;detail.innerHTML='';document.title='CDC Guillermo Orozco · Comunidad en movimiento';const anchor=document.getElementById(location.hash.slice(1));if(anchor)requestAnimationFrame(()=>anchor.scrollIntoView());return}home.hidden=true;detail.hidden=false;const links=[['whatsapp','WhatsApp'],['facebook','Facebook'],['tiktok','TikTok'],['instagram','Instagram'],['enlacePersonalizado','Más información']].filter(([key])=>d[key]);detail.innerHTML=`<a class="back" href="#actividades">← Volver a las actividades</a><div class="detail-hero"><span class="kicker">${groups[id]} · CDC Guillermo Orozco</span><h1 id="detail-title" tabindex="-1">${esc(name(d))}</h1>${d.instructor?`<p>${esc(d.instructor)}</p>`:''}</div><div class="detail-layout"><div>${d.frase?`<div class="detail-note"><p>${esc(d.frase)}</p></div>`:''}<div class="media" style="margin-top:22px">${d.imagen?`<figure><img src="${esc(d.imagen)}" alt="${esc(name(d))}" onerror="this.hidden=true;this.nextElementSibling.textContent='La fotografía estará disponible al cargar los archivos del sitio.'"><figcaption>Galería · ${esc(name(d))}</figcaption></figure>`:''}${d.video?`<figure><video controls playsinline preload="none" src="${esc(d.video)}" aria-label="Video de ${esc(name(d))}"></video><figcaption>Conoce la actividad en video</figcaption></figure>`:''}</div></div><aside class="info-panel"><h2>¿Te interesa participar?</h2><p>Contacta directamente para conocer horarios, costos, disponibilidad y requisitos de esta actividad.</p>${links.map(([key,label],i)=>`<a class="social ${i===0?'primary':''}" href="${esc(d[key])}" target="_blank" rel="noopener noreferrer">${label} <span aria-hidden="true">↗</span></a>`).join('')}<p>Los enlaces abren el contacto o la página de cada responsable.</p></aside></div>`;document.title=name(d)+' | CDC Guillermo Orozco';window.scrollTo(0,0);document.getElementById('detail-title').focus({preventScroll:true})}
+window.addEventListener('hashchange',route);const theme=document.getElementById('theme');function setTheme(dark){document.body.classList.toggle('dark',dark);theme.setAttribute('aria-label',dark?'Activar modo claro':'Activar modo oscuro');theme.textContent=dark?'☀':'◐';theme.setAttribute('aria-pressed',String(dark))}let saved;try{saved=localStorage.getItem('cdc-theme')}catch(e){}setTheme(saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches);theme.addEventListener('click',()=>{const dark=!document.body.classList.contains('dark');setTheme(dark);try{localStorage.setItem('cdc-theme',dark?'dark':'light')}catch(e){}});render();route();
+</script></body></html>
