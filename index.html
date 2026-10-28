@@ -155,16 +155,16 @@ body.dark::after{background:rgba(16,30,24,.9)}
       video: '',    
       enlacePersonalizado: 'https://jaid227.github.io/Fisioterapias.JaidLozano/',
     },
-    Podología: {
+    Podologia: {
       nombre: 'Podología',
       multimedia: [], // Opcional: añade aquí varias imágenes y videos; consulta el ejemplo de abajo.
-      instructor: 'Fisioterapeuta Jaid Lozano',
+      instructor: '',
       genero: 'Masculino',
       frase: '',
       imagen: 'imagenes/imagen-pie1.png',
       video: '',    
-      facebook: 'https://www.facebook.com/profile.php?id=61594391103977&mibextid=wwXIfr&rdid=8SEyZx8n3L5Dqkgd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19XJfLL5qd%2F%3Fmibextid%3DwwXIfr#',
-      enlacePersonalizado: 'https://jaid227.github.io/Fisioterapias.JaidLozano/',
+      facebook: '',
+      enlacePersonalizado: '',
     },
     Psicologia: {
       nombre: 'Psicología',
@@ -180,9 +180,9 @@ body.dark::after{background:rgba(16,30,24,.9)}
   
 
 
-const groups={pole:'Arte y movimiento',lucha:'Deporte',fenix:'Arte y movimiento',becerros:'Deporte',tsunami:'Deporte',boxing:'Deporte',gimnasia:'Arte y movimiento',yoga:'Bienestar y servicios',basquet:'Deporte',juridico:'Bienestar y servicios',Persona:'Bienestar y servicios',Psicologia:'Bienestar y servicios',Danza:'Arte y movimiento',Fisioterapia:'Bienestar y servicios'};
-const symbols={pole:'✧',lucha:'◈',fenix:'✴',becerros:'◉',tsunami:'≋',boxing:'◇',gimnasia:'∞',yoga:'◎',basquet:'◉',juridico:'§',Persona:'✳',Psicologia:'◌',Danza:'✧',Fisioterapia:'⌁'};
-const order=['pole','lucha','fenix','becerros','tsunami','boxing','gimnasia','yoga','basquet','juridico','Persona','Psicologia','Danza','Fisioterapia'];
+const groups={pole:'Arte y movimiento',lucha:'Deporte',fenix:'Arte y movimiento',becerros:'Deporte',tsunami:'Deporte',boxing:'Deporte',gimnasia:'Arte y movimiento',yoga:'Bienestar y servicios',basquet:'Deporte',juridico:'Bienestar y servicios',Persona:'Bienestar y servicios',Psicologia:'Bienestar y servicios',Danza:'Arte y movimiento',Fisioterapia:'Bienestar y servicios', Podologia: 'Bienestar y servicios'};
+const symbols={pole:'✧',lucha:'◈',fenix:'✴',becerros:'◉',tsunami:'≋',boxing:'◇',gimnasia:'∞',yoga:'◎',basquet:'◉',juridico:'§',Persona:'✳',Psicologia:'◌',Danza:'✧',Fisioterapia:'⌁', Podologia: '👣'};
+const order=['pole','lucha','fenix','becerros','tsunami','boxing','gimnasia','yoga','basquet','juridico','Persona','Psicologia','Danza','Fisioterapia', 'Podologia'];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const name=d=>d.nombre==='juridico'?'Jurídico':d.nombre;
 let filter='Todas';const search=document.getElementById('search');const grid=document.getElementById('grid');
